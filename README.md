@@ -7,6 +7,6 @@
 
 >## 02 ##
 >[前往查看](https://github.com/KEYs-195/loading_animation/tree/main/02)<br>
->![图片](https://github.com/KEYs-195/loading_animation/blob/main/01/01.png?raw=true)<br>
+>![图片](https://github.com/KEYs-195/loading_animation/blob/main/02/02.png?raw=true)<br>
 >[源地址](https://www.bilibili.com/video/BV1mF411W7TZ)
 
