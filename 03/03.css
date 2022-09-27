@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f3542;
+}
+
+.loader{
+    position: relative;
+    text-align: center;
+}
+
+.left-load{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+
+.right-load{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.dots-top{
+    position: absolute;
+    top: -59px;
+    left: -205px;
+    transform: rotate(0deg);
+}
+
+.dots-bottom{
+    position: absolute;
+    top: 59px;
+    left: 205px;
+    transform: rotate(180deg);
+}
+
+.left-load .dot{
+    /* border-color: transparent; */
+    animation: leftdot 2s linear infinite;
+    animation-delay: calc(var(--i) * 50ms);
+}
+
+.right-load .dot{
+    /* border-color: transparent; */
+    animation: rightdot 2s linear infinite;
+    animation-delay: calc(var(--i) * 50ms);
+}
+
+.dot{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border: 1px transparent solid;
+    z-index: 5;
+    transform: rotate(45deg);
+    border-radius: 30%;
+}
+
+.dot:nth-child(2){
+    z-index: 4;
+}
+.dot:nth-child(3){
+    z-index: 3;
+}
+.dot:nth-child(4){
+    z-index: 2;
+}
+.dot:nth-child(5){
+    z-index: 1;
+}
+
+.dot:nth-child(2)::after{
+    background-color: #36bdba;
+    transform: scale(0.8);
+}
+.dot:nth-child(3)::after{
+    background-color: #3cd1cf;
+    transform: scale(0.6);
+}
+.dot:nth-child(4)::after{
+    background-color: #3fe4e1;
+    transform: scale(0.4);
+}
+.dot:nth-child(5)::after{
+    background-color: #42fffc;
+    transform: scale(0.2);
+}
+
+.dot::after{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #268785;
+    border-radius: 50%;
+}
+
+@keyframes leftdot {
+    0%{
+        border-color: lightcoral;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+    5%{
+        border-color: lightcoral;
+        transform: rotate(45deg);
+        animation-timing-function: ease-out;
+    }
+
+    70%{
+        transform: rotate(405deg);
+        animation-timing-function: ease-in;
+        border-color: transparent;
+        opacity: 0;
+    }
+
+    100%{
+        border-color: transparent;
+        transform: rotate(405deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rightdot {
+    0%{
+        border-color: lightseagreen;
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+    5%{
+        border-color: lightseagreen;
+        transform: rotate(45deg);
+        animation-timing-function: ease-out;
+    }
+
+    70%{
+        border-color: transparent;
+        transform: rotate(405deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    100%{
+        border-color: transparent;
+        transform: rotate(405deg);
+        opacity: 0;
+    }
+}
