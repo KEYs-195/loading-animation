@@ -1,0 +1,80 @@
+.header{
+    position: absolute;
+    width: 15%;
+    height: 100vh;
+    padding: 1%;
+    left: 0;
+    background-color: #7a7374;
+    margin-left: calc((15% - 27px) * -1);
+    transition: all 0.5s ease-in-out;
+}
+
+.header:hover{
+    margin-left: 0;
+}
+
+.head-btn{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 21px;
+    background-color: #2f3542;
+}
+
+.head-btn::before,
+.head-btn::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 21px;
+    background-color: #2f3542;
+}
+
+.head-btn::before{
+    left: -6px;
+}
+
+.head-btn::after{
+    left: 6px;
+}
+
+.headints{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.headint{
+    font-size: 18px;
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    margin: 0 15%;
+    margin-top: calc(var(--i) * 50%);
+    position: relative;
+    color: #2f3542;
+}
+
+.headint:nth-child(1)::after{
+    content: 'loading-animation';
+}
+
+.headint:nth-child(2)::after{
+    content: 'Used to collect loading animation';
+}
+
+.headint:nth-child(2)::after,
+.headint:nth-child(1)::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5%;
+    left: 50%;
+    color: #a09697;
+    filter: blur(1.5px);
+}
