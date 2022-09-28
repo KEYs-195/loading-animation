@@ -10,7 +10,7 @@ body{
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: rgb(26, 30, 44);
+    background-color: #2f3542;
 }
 
 .loader{
@@ -41,11 +41,11 @@ body{
 .load::after{
     transform: rotate(45deg);
     background-color: #6739d3;
-    animation: rotateing 6s ease-in-out infinite;
+    /* animation: rotateing 6s ease-in-out infinite; */
 }
 
 .load::before{
-    animation: androtateing 6s ease-in-out infinite;
+    /* animation: androtateing 6s ease-in-out infinite; */
     background-color: #dfb646;
 }
 
